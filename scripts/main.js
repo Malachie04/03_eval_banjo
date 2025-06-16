@@ -28,7 +28,6 @@ async function afficherData() {
         HtmlUserPick.innerHTML+=`
         <img class="user-img" src="${picture.image}" title="${picture.name}">
         `;
-        // console.log(picture);
 
         //Créaction object pour affichage d'un seul USer
         const user={
@@ -55,10 +54,10 @@ HtmlUserPick.addEventListener('click',(event)=>{
         let data=clickedPicture.src;
         console.log(data);
 
+        //Recupération de l'oject cliqué sur base de la photo
         let object=usersList.find((element) => element.picture === data);
 
-        console.log(object);
-
+        //affichage de ses détails
         userDatils.innerHTML=`
             <img src="${object.picture}" alt="Katrina Robinson">
             <h2>${object.name}</h2>
