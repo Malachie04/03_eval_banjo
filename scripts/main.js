@@ -10,7 +10,7 @@ const HtmlUserPick=document.querySelector('.users-pics');
 //Fonction elements et chargements json
 async function getData() {
     try {
-        const response=await fetch('../scripts/datas.json');
+        const response=await fetch('/scripts/datas.json');
         const data=await response.json();
         // console.log(data);
         return data;
